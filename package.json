@@ -1,0 +1,25 @@
+{
+  "name": "sketch-to-css-mixin",
+  "version": "1.0.0",
+  "description": "Workflow utility to convert a Sketch file to CSS Mixins",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": "git:design-ops/sketch-to-css-mixin",
+  "author": "Design Operations Collective",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/design-ops/sketch-to-css-mixin/issues"
+  },
+  "homepage": "https://github.com/design-ops/sketch-to-css-mixin#readme",
+  "dependencies": {
+    "sketch-to-svg": "^1.0.0",
+    "fontkit": "^1.8.0",
+    "handlebars": "^4.5.3",
+    "jsdom": "^15.2.1",
+    "sketch-constructor": "^1.14.0",
+    "system-commands": "^1.1.7",
+    "yargs": "^15.0.2"
+  }
+}
