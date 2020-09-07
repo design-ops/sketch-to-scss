@@ -20,7 +20,7 @@ const argv = require('yargs')
     .alias('h', 'help')
     .argv
 
-extract(argv['_'][0], argv['f'], argv['o'])
+extract(argv['_'][0], argv['l'], argv['o'])
 
 function extract(filename, format, outputFolder) {
 
@@ -31,7 +31,7 @@ function extract(filename, format, outputFolder) {
         .then(styles => {
             fs.mkdirSync(outputFolder, { recursive: true })
             //console.log(require('util').inspect(styles, {showHidden: false, depth: null}))
-            return generateMixin(styles, "sass", outputFolder)
+            return generateMixin(styles, format, outputFolder)
         })
         .catch(err => {
             console.error("Failed to extract", err)
