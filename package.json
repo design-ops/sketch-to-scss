@@ -14,11 +14,11 @@
   },
   "homepage": "https://github.com/design-ops/sketch-to-css-mixin#readme",
   "dependencies": {
-    "sketch-to-svg": "^1.0.0",
     "fontkit": "^1.8.0",
-    "handlebars": "^4.5.3",
+    "handlebars": "^4.7.6",
     "jsdom": "^15.2.1",
     "sketch-constructor": "^1.14.0",
+    "sketch-to-svg": "^1.0.2",
     "system-commands": "^1.1.7",
     "yargs": "^15.0.2"
   }
