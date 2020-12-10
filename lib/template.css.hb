@@ -65,15 +65,15 @@ https://github.com/design-ops/sketch-to-scss
 }
 {{/if}}
 
-{{#if borders}}
+{{#if modifiers}}
 /* ****************************************** */
-/* Borders                                    */
+/* Modifiers                                  */
 /* ****************************************** */
 :root {
-  {{#each borders as |style|}}
+  {{#each modifiers as |style|}}
   /* {{style.name}} */
   {{#each css as |property|}}
-  --border--{{style.name}}--{{property.name}}: {{{property.value}}};
+  --modifier--{{style.name}}--{{property.name}}: {{{property.value}}};
   {{/each}}
 
   {{/each}}
