@@ -261,27 +261,28 @@ All **Layer Style**, **Text Style**, and **Asset** names in your document are co
 
 
 
-## Rounded Corner
+## Modifiers
 
-At the moment rounded corners are a bit hardcoded. The script looks for any artboard with the name or `Button/Shape` or `Form/Shape` and uses the topmost's layer rounded corner settings. This is because rounded corners are not part of the Layer Style in Sketch.
+In Sketch, some styling attributes are not included in the shared styles. That is why we need to create seperate methods to use them. Current;y we only support Corner Radius.
 
 #### Mixin properties
 
 ##### For SASS (sketch.scss)
 ```css
-@mixin border--[asset name] {
+@mixin modifier--[asset name] {
 	border-radius: [ Xpx | Xpx Xpx Xpx Xpx ];
 }
 ```
 
 ##### For LESS (sketch.less)
 ```css
-.border--[asset name]() {
+.modifier--[asset name]() {
 	border-radius: [ Xpx | Xpx Xpx Xpx Xpx ];
 }
 ```
 
-#### Radius
+#### Corner Radius
+The convertor looks for any artboard with a name that ends with ` --radius` and uses the topmost's layer rounded corner settings. This is because rounded corners are not part of the Layer Style in Sketch.
 
 |Sketch Property|Description|CSS Property|
 |---|---|---|
