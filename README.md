@@ -26,7 +26,7 @@ By default, the results will appear in the `output` folder in the project - this
 
 #### Selecting Mixin flavor
 
-SASS is output by default, but you can specify which Mixin flavor you prefer by using the `-l` argument (either `-l sass` or `-l less`).
+CSS is output by default, but you can specify which Mixin flavor you prefer by using the `-l` argument (either `-l sass`, `-l less` or `-l css`).
 
 #### Need help?
 
@@ -34,20 +34,20 @@ You can also get help by running `npm start -- -h`, which should list out any ot
 
 ## What to expect
 
-The convertor will export a single **SASS** or **LESS** file containing **Mixins** of every **Text Style**, **Layer Style** and **Symbol Master** in your Sketch document.
+The convertor will export a single **CSS**, **SASS** or **LESS** file containing **Mixins** of every **Text Style**, **Layer Style** and **Symbol Master** in your Sketch document.
 
 The convertor will also extract required files like **Fonts**, **Bitmaps** and any **SVG's** greater than 2kb in filesize.
 
 All files will be automatically linked within the Mixin file.
 
 ```
-  sketch.scss (or .less)
+  sketch.scss (or .css, or .less)
    └ assets
      └ fonts
      └ images
 ```
 
-### /sketch.scss (or /sketch.less)
+### /sketch.css (or /sketch.[less|scss])
 
 This is the main file where you will find all the @mixins.
 
