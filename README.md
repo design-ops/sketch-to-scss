@@ -93,6 +93,18 @@ All **Layer Style**, **Text Style**, and **Asset** names in your document are co
 
 ### Mixin properties
 
+##### For CSS (sketch.css)
+```css
+--layer--[layer style name]--background-color: [ background-color ];
+--layer--[layer style name]--background-image: [ background-image ], [ background-image ], ... ;
+--layer--[layer style name]--background-repeat: [ background-repeat ];
+--layer--[layer style name]--background-size: [ background-size ];
+--layer--[layer style name]--opacity: [ opacity ];
+--layer--[layer style name]--mix-blend-mode: [ mix-blend-mode ];
+--layer--[layer style name]--border: [ border ];
+--layer--[layer style name]--box-shadow: [ box-shadow ], [ box-shadow ], ... ;
+```
+
 ##### For SASS (sketch.scss)
 ```css
 @mixin layer--[layer style name] {
@@ -164,6 +176,20 @@ All **Layer Style**, **Text Style**, and **Asset** names in your document are co
 
 ### Mixin properties
 
+##### For CSS (sketch.css)
+```css
+--text--[asset name]--font-family: [ font-family ];
+--text--[asset name]--font-size: [ font-size ];
+--text--[asset name]--letter-spacing: [ letter-spacing ];
+--text--[asset name]--line-height: [ line-height ];
+--text--[asset name]--color: [ color ];
+--text--[asset name]--text-align: [ text-align ];
+--text--[asset name]--vertical-align: [ vertical-align ];
+--text--[asset name]--text-decoration: [ text-decoration ];
+--text--[asset name]--text-transfomr: [ text-transform ];
+--text--[asset name]--text-shadow: [ text-shadow ], [ text-shadow ], ... ;
+```
+
 ##### For SASS (sketch.scss)
 ```css
 @mixin text--[asset name] {
@@ -230,6 +256,15 @@ All **Layer Style**, **Text Style**, and **Asset** names in your document are co
 
 ### Mixin properties
 
+##### For CSS (sketch.css)
+```css
+--asset--[asset name]--background-image: [ url(' filename.svg | base64 ') ];
+--asset--[asset name]--background-repeat: no-repeat;
+--asset--[asset name]--background-position: center;
+--asset--[asset name]--width: [ width ];
+--asset--[asset name]--height: [ height ];
+```
+
 ##### For SASS (sketch.scss)
 ```css
 @mixin asset--[asset name] {
@@ -266,6 +301,11 @@ All **Layer Style**, **Text Style**, and **Asset** names in your document are co
 In Sketch, some styling attributes are not included in the shared styles. That is why we need to create seperate methods to use them. Current;y we only support Corner Radius.
 
 #### Mixin properties
+
+##### For CSS (sketch.css)
+```css
+--modifier--[asset name]--border-radius: [ Xpx | Xpx Xpx Xpx Xpx ];
+```
 
 ##### For SASS (sketch.scss)
 ```css
