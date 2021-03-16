@@ -9,24 +9,28 @@ const argv = require('yargs')
     .alias('o', 'output')
     .nargs('o', 1)
     .default('o', `./output`)
-    .describe('o', 'Folder to output the mixin and assets.')
+    .describe('o', 'Folder to output the CSS and assets.')
     .alias('l', 'lang')
     .nargs('l', 1)
     .default('l', 'css')
-    .describe('l', 'Language to generate mixin')
+    .describe('l', 'Language to generate CSS')
     .choices('l', ['scss', 'less', 'css'])
+    .alias('b64', 'base64')
+    .boolean('b64')
+    .default('b64', false)
+    .describe('b64', 'Encode assets to Base 64')
     .demandCommand(1)
     .help('h')
     .alias('h', 'help')
     .argv
 
-extract(argv['_'][0], argv['l'], argv['o'])
+extract(argv['_'][0], argv['l'], argv['o'], argv['b64'])
 
-function extract(filename, format, outputFolder) {
+function extract(filename, format, outputFolder, base64) {
 
     Sketch.fromFile(filename)
         .then(sketch => {
-            return processSketchFile(sketch, filename, outputFolder)
+            return processSketchFile(sketch, filename, outputFolder, base64)
         })
         .then(styles => {
             fs.mkdirSync(outputFolder, { recursive: true })
