@@ -28,6 +28,21 @@ By default, the results will appear in the `output` folder in the project - this
 
 CSS is output by default, but you can specify which Mixin flavor you prefer by using the `-l` argument (either `-l sass`, `-l less` or `-l css`).
 
+#### Force "Base 64" encoding
+
+There are practical cases where encoding Assets and Fonts into the CSS file makes sense, for example when you need to style a WebView in iOS. For this case, we've added a "Base 64" force encoder switch.
+
+Just add `--b64`
+
+> Note: the base 64 version will be significanlty larger in filesize. This does not really matter if you're including the file in an iOS app, but we'd recommend avoiding this for web use.
+
+#### Example command
+
+Here's an example command where we convert the file `path/to/file.sketch` and export to `export/styles` folder, in `LESS` and everything encoded in `Base 64`.
+
+`npm start -- path/to/file.sketch -o export/styles -l less --b64`
+
+
 #### Need help?
 
 You can also get help by running `npm start -- -h`, which should list out any other arguments we've forgotten to explain here, with examples.
