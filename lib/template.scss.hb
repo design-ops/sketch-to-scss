@@ -15,7 +15,7 @@ https://github.com/design-ops/sketch-to-scss
   font-family: "{{family}}";
   font-style: normal;
   font-weight: normal;
-  src: url('{{path}}'){{#if format}} format("{{format}}"){{/if}};
+  src: url('{{{path}}}'){{#if format}} format("{{format}}"){{/if}};
 }
 
 {{/each}}
