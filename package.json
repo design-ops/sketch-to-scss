@@ -16,7 +16,7 @@
   "dependencies": {
     "decompress": "^4.2.1",
     "fontkit": "^1.8.0",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "jsdom": "^15.2.1",
     "sketch-constructor": "^1.14.0",
     "sketch-to-svg": "^1.0.2",
